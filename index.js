@@ -9,7 +9,7 @@
 
 'use strict';
 
-var dict = {
+var delimiters = {
     optionalChar: '[',
     repeatChar: '{',
     '[': ']',
@@ -18,7 +18,7 @@ var dict = {
 
 module.exports = {
 
-    specialChars: [dict.optionalChar, dict.repeatChar],
+    specialChars: [delimiters.optionalChar, delimiters.repeatChar],
 
     parse: function (expression, callback) {
 
@@ -38,16 +38,16 @@ module.exports = {
         while (currentIndex < expression.length) {
             if (this.specialChars.indexOf(expression[currentIndex]) > -1) {
 
-                var isArray = expression[currentIndex] == dict.repeatChar;
-                var isOptional = expression[currentIndex] == dict.optionalChar;
+                var isArray = expression[currentIndex] == delimiters.repeatChar;
+                var isOptional = expression[currentIndex] == delimiters.optionalChar;
 
-                var nestedGrammar = this.getInnerExpression(expression, currentIndex, expression[currentIndex], dict[expression[currentIndex]]);
+                var nestedGrammar = this.getInnerExpression(expression, currentIndex, expression[currentIndex], delimiters[expression[currentIndex]]);
                 var innerExpression = nestedGrammar.innerExpression;
 
                 currentIndex = nestedGrammar.currentIndex;
 
                 /// Trim the repeat char if available at the beginning
-                if (isOptional && innerExpression[0] == dict.repeatChar) {
+                if (isOptional && innerExpression[0] == delimiters.repeatChar) {
                     isArray = true;
                     innerExpression = innerExpression.substring(1, innerExpression.length - 1);
                 }

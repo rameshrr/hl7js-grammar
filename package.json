@@ -1,6 +1,6 @@
 {
   "name": "hl7js-grammar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Node.js Parser for HL7 Grammar",
   "main": "index.js",
   "scripts": {
