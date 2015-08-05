@@ -1,0 +1,27 @@
+{
+  "name": "hl7js-grammar",
+  "version": "0.0.1",
+  "description": "Node.js Parser for HL7 Grammar",
+  "main": "index.js",
+  "scripts": {
+    "test": "test index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://rameshrr@github.com/rameshrr/hl7js-grammar.git"
+  },
+  "keywords": [
+    "hl7",
+    "grammar",
+    "hl7grammar",
+    "grammarparser",
+    "parser",
+    "hl7js"
+  ],
+  "author": "Ramesh R <ramesh.myoffice@gmail.com> (https://github.com/rameshrr)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rameshrr/hl7js-grammar/issues"
+  },
+  "homepage": "https://github.com/rameshrr/hl7js-grammar"
+}
