@@ -13,7 +13,7 @@ var parser = require('hl7js-grammar');
 
 ```
 
-## reader.read(buffer, callback)
+## reader.read(expression, callback)
 ```javascript
 
 /// Basic Parsing
